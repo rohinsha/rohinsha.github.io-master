@@ -102,6 +102,11 @@ body {
 }
 
 .landing-page {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
   position: relative;
   background: url('http://thecodeplayer.com/u/m/b1.png') no-repeat center center fixed;
   color: #fff;
@@ -117,22 +122,53 @@ body {
   }
 
 .skills {
-  text-align: center;
+  box-sizing: border-box;
+  margin: -10px auto 0;
+  max-width: 960px;
+  padding: 0 15px;
+  text-align: left;
+  width: 100%;
 }
 
-.skills li:first-child{
-  background-color: white;
-  color: black;
-  margin-left: 20px;
+.skill-category {
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  gap: 18px;
+  padding: 12px 0;
+}
+
+.skill-category h2 {
+  color: #fff;
+  flex: 0 0 180px;
   font-size: 16px;
   font-weight: bold;
+  margin: 0;
+  text-align: left;
 }
 
-.skills li {
+.skill-category ul {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill-category li {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
   display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  list-style-type: none;
+  font-size: 15px;
+  margin: 3px;
+  padding: 6px 10px;
+}
+
+.skill-category li span {
+  color: #ccc;
+  font-size: 12px;
+  font-style: italic;
 }
 
 
@@ -149,11 +185,35 @@ body {
 
   color:white !important;
   max-width: 700px;
-  margin: 140px auto 0;
-  line-height: 120px;
+  margin: 0 auto;
+  line-height: 1.2;
   letter-spacing: 4px;
   opacity: 1 !important;
 }
+
+.main-site-link {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  bottom: 20px;
+  color: #fff;
+  left: auto;
+  font-size: 14px;
+  padding: 10px 16px;
+  position: fixed;
+  right: 24px;
+  text-decoration: none;
+  top: auto;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  z-index: 1;
+}
+
+.main-site-link:hover,
+.main-site-link:focus {
+  background-color: #fff;
+  color: #252839;
+  text-decoration: none;
+}
+
 .prof-picture{
   position: relative;
   margin-top: 20px;
@@ -405,6 +465,11 @@ top:20px;
 .navbar-custom .navbar-brand {
   color: #fed136;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  left: auto;
+  position: fixed;
+  left: 20px;
+  top: 0;
+  z-index: 1001;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -482,34 +547,39 @@ top:20px;
 }
 
 .inner-block {
- 
   float: none;
-  margin-top: 70px;
-  margin-bottom: 40px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-.list  h3 {
+.education .list {
+  margin-bottom: 0;
+}
 
-  margin-top: 8px ;
-  margin-bottom: 0px ;
+.education .list h2 {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.education .list h3 {
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 6px;
 }
 
 .margin-btm{
-  margin-bottom: 30px !important;
+  margin-bottom: 12px !important;
 }
 
-.landing-page {
-  margin-top: -140px;
-}
 /*education*/
 .education{
-  min-height: 550px;
-  
+  min-height: 0;
   background-color: #696969;
   color: white;
   margin-top: -20px;
+  padding-bottom: 20px;
 }
 
 
@@ -680,14 +750,19 @@ footer {
     }
   }
   @media screen and (min-width: 320px) and (max-width: 481px) {
-  .skills li:first-child {
-     font-size: 10px;
-
+  .skill-category {
+    display: block;
+    padding: 10px 0;
   }
 
-  .skills li {
-    padding: 6px 4px;
-    font-size: 8px;
+  .skill-category h2 {
+    font-size: 14px;
+  }
+
+  .skill-category li {
+    font-size: 15px;
+    margin: 2px;
+    padding: 5px 7px;
   }
 
   .about-me > p {
@@ -698,52 +773,55 @@ footer {
 }
 
  @media screen and (min-width: 482px) and (max-width: 767px) {
-  .skills li:first-child {
-     font-size: 12px;
-margin-left: 0;
+  .skill-category {
+    gap: 12px;
   }
 
-  .skills li {
-    padding: 10px 5px;
-    font-size: 12px;
+  .skill-category h2 {
+    flex-basis: 145px;
+    font-size: 14px;
+  }
+
+  .skill-category li {
+    font-size: 15px;
+    padding: 6px 8px;
   }
 }
 
- @media screen and (min-width: 993px) {
-.landing-page h1{
-  position: relative;
-  top:70px;
+ @media screen and (min-width: 768px) and (max-width: 992px) {
+   .landing-page h1{
+     color: white !important;
+     max-width: 300px;
+     margin: 0 auto;
+     line-height: 1.2;
+     letter-spacing: 3px;
+     opacity: 1 !important;
+     font-size: 4rem;
+   }
  }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .landing-page h1{
-        color: white !important;
-    max-width: 300px;
-    margin: 144px auto 0;
-    line-height: 106px;
-    letter-spacing: 3px;
-    opacity: 1 !important;
-position: relative;
-top:50px;
-font-size: 4rem;
-  }
+ @media screen and (min-width: 320px) and (max-width: 767px) {
 
+      .main-site-link {
+        bottom: 16px;
+        font-size: 12px;
+        padding: 8px 12px;
+        right: 16px;
+        top: auto;
+      }
 
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
+      .navbar-toggle {
+        float: left;
+        margin-left: 15px;
+      }
 
-    .landing-page h1 {
+      .landing-page h1 {
     
-    max-width: 200px;
-    margin: 220px auto 0;
-    line-height: 80px;
-    letter-spacing: 4px;
-    font-size: 2rem !important;
+     max-width: 300px;
+     margin: 0 auto;
+     line-height: 1.2;
+     letter-spacing: 3px;
+     font-size: 2rem !important;
   
-  }
-
-  .education{
-    min-height:390px; 
   }
 
   section h1{
@@ -751,9 +829,6 @@ font-size: 4rem;
   }
 
 
-.navbar-brand {
-  top:0;
-}
 .prof-picture img{
   width: 120px;
 }
@@ -763,10 +838,10 @@ font-size: 4rem;
   margin-bottom: 10px;
 }
 
-.list h2{
+.education .list h2{
   font-size: 0.8rem !important;
 }
-.list h3{
+.education .list h3{
   font-size: 0.6rem !important;
 }
 .project-title{
@@ -901,5 +976,3 @@ font-size: 4rem;
     margin-left: -1px;
   } 
 }
-
-

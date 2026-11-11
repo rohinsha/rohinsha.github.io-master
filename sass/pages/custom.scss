@@ -475,18 +475,7 @@ header {
     text-shadow: -2px -2px 0 $black, 2px -2px 0 $black, -2px 2px 0 $black, 2px 2px 0 $black;
     z-index: 1;
   }
-
-  h3{
-    color: $white;
-    font-family: 'Pacifico', sans-serif;
-    font-size: 80px;
-    left: 40%;
-    max-width: 800px;
-    position: relative;
-    text-shadow: -2px -2px 0 $black, 2px -2px 0 $black, -2px 2px 0 $black, 2px 2px 0 $black;
-    z-index: 1;
-  }
-
+  
   .btn {
     @include transition(all .4s ease);
     background: $white;
@@ -795,13 +784,6 @@ footer {
       top: -40px;
     }
     
-    h3 {
-      font-size: 30px;
-      left: 30%;
-      max-width: 500px;
-      top: -60px;
-    }
-
     .btn {
       @include transition(all .4s ease);
       border-radius: 7px;
@@ -1139,13 +1121,6 @@ footer {
       left: 36%;
       max-width: 340px;
       top: -77px;
-    }
-
-       h3 {
-      font-size: 50px;
-      left: 36%;
-      max-width: 500;
-      top: -100px;
     }
 
     .btn {
