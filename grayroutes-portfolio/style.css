@@ -161,7 +161,7 @@ body {
   color: #fff;
   display: inline-block;
   font-size: 15px;
-  margin: 3px;
+  margin: 5px;
   padding: 6px 10px;
 }
 
@@ -175,7 +175,7 @@ body {
 .about {
   min-height: 590px;
   margin:0 auto;
-  background-color: #171f29;
+  background-color: #313237;
   margin-top: -20px;
   color: white;
 }
@@ -558,6 +558,14 @@ top:20px;
   margin-bottom: 0;
 }
 
+.education .list li {
+  margin-bottom: 24px;
+}
+
+.education .list li:last-child {
+  margin-bottom: 0;
+}
+
 .education .list h2 {
   font-size: 20px;
   margin: 8px 0;
@@ -761,7 +769,7 @@ footer {
 
   .skill-category li {
     font-size: 15px;
-    margin: 2px;
+    margin: 5px;
     padding: 5px 7px;
   }
 
@@ -830,6 +838,7 @@ footer {
 
 
 .prof-picture img{
+  border-radius: 10px;
   width: 120px;
 }
 
